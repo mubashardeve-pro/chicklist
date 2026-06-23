@@ -152,7 +152,8 @@ export default function ChecklistForm() {
 
   return (
     <div className="page-wrapper">
-      <div className="action-bar no-print">
+      <div className="action-bar no-print ">
+    
         <button
           type="button"
           className="btn btn-primary"
@@ -162,15 +163,21 @@ export default function ChecklistForm() {
           <DownloadIcon />
           Download PDF
         </button>
+
         <button type="button" className="btn btn-whatsapp" onClick={handleWhatsAppClick}>
           <WhatsAppIcon />
           Share on WhatsApp
         </button>
+
         <button type="button" className="btn btn-email" onClick={handleEmailClick}>
           <EmailIcon />
           Share via Email
         </button>
+        
       </div>
+
+
+
 
       <form className="checklist-form" onSubmit={(e) => e.preventDefault()}>
         <div ref={pdfContentRef} className="pdf-content">
@@ -183,12 +190,7 @@ export default function ChecklistForm() {
                   className="form-logo"
                 />
               </div>
-              <div className="qr-section">
-                <div className="qr-placeholder">
-                  <span>QR</span>
-                </div>
-                <span className="qr-label">Scan to Visit</span>
-              </div>
+
             </div>
 
             <div className="offices-row">

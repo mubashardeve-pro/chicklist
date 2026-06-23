@@ -32,6 +32,7 @@ body {
 .action-bar {
   display: flex;
   gap: 12px;
+  justify-content: flex-end;
   flex-wrap: wrap;
   margin-bottom: 20px;
   padding: 16px 20px;
