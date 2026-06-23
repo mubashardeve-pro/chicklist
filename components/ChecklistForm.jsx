@@ -213,7 +213,7 @@ export default function ChecklistForm() {
           <div className="client-info-row">
 
             <div className="country-field name-field">
-              <label className="text-[15px]" htmlFor="client-name">NAME</label>
+              <label htmlFor="client-name">Name</label>
               <input
                 id="client-name"
                 ref={nameInputRef}
@@ -226,7 +226,7 @@ export default function ChecklistForm() {
               />
             </div>
             <div className="country-field">
-              <label htmlFor="country">COUNTRY</label>
+              <label htmlFor="country">Country</label>
               <div className="country-input-wrap">
                 <select
                   id="country"
@@ -273,7 +273,7 @@ export default function ChecklistForm() {
           ))}
 
           <section className="form-section remarks-section">
-            <div className="section-banner">REMARKS</div>
+            <div className="section-banner">Remarks</div>
             <textarea
               id="remarks"
               rows={5}
@@ -284,7 +284,7 @@ export default function ChecklistForm() {
           </section>
 
           <footer className="form-footer">
-            <p>EDIFY GROUP UAN: +92 304 1111 444</p>
+            <p>Edify group UAN: +92 304 1111 444</p>
             <div className="footer-social">
               <span>info@edify.pk</span>
             </div>

@@ -340,6 +340,7 @@ body {
   justify-content: space-between;
   gap: 12px;
   margin-bottom: 10px;
+  
 
 }
 
@@ -348,11 +349,16 @@ body {
   border: 2px solid #d1d5db;
   padding: 7px 12px;
   font-size: 13px;
+  font-weight: 700;
   width: 220px;
   outline: none;
   background: #e5e7eb;
   color: #000000;
-  display: flex;
+}
+
+.name-field input::placeholder {
+  color: #6b7280;
+  font-weight: 400;
 }
 
 .name-field input:focus {
@@ -366,10 +372,6 @@ body {
   background-color: var(--navy);
   color: var(--white);
   border-color: var(--navy);
-}
-
-.name-field input::placeholder {
-  color: #6b7280;
 }
 
 .name-field input.has-value::placeholder {
@@ -435,7 +437,6 @@ body {
   padding: 8px 12px;
   font-size: 12px;
   font-weight: 700;
-  letter-spacing: 1px;
 }
 
 .country-pdf-value {
@@ -478,7 +479,6 @@ body {
   margin: 8px 0;
   font-size: 15px;
   font-weight: 700;
-  letter-spacing: 1px;
   margin-bottom: 20px;
   margin-top: 20px;
 }
