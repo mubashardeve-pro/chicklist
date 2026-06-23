@@ -241,7 +241,7 @@ export default function ChecklistForm() {
           <div className="client-info-row">
 
             <div className="country-field name-field">
-              <label htmlFor="client-name">Name</label>
+              <label htmlFor="client-name">Student Name</label>
               <input
                 id="client-name"
                 ref={nameInputRef}
