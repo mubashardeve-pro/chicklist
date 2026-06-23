@@ -51,6 +51,7 @@ export default function ChecklistForm() {
   const [emailError, setEmailError] = useState('');
 
   const pdfContentRef = useRef(null);
+  const nameInputRef = useRef(null);
   const countrySelectRef = useRef(null);
   const toastTimerRef = useRef(null);
 
@@ -84,7 +85,8 @@ export default function ChecklistForm() {
     const result = validateForm(form);
     if (!result.valid) {
       showToast(result.message || 'Please complete the form.');
-      if (!form.country.trim()) countrySelectRef.current?.focus();
+      if (!form.name.trim()) nameInputRef.current?.focus();
+      else if (!form.country.trim()) countrySelectRef.current?.focus();
       return false;
     }
     return true;
@@ -153,7 +155,7 @@ export default function ChecklistForm() {
   return (
     <div className="page-wrapper">
       <div className="action-bar no-print ">
-    
+
         <button
           type="button"
           className="btn btn-primary"
@@ -173,7 +175,7 @@ export default function ChecklistForm() {
           <EmailIcon />
           Share via Email
         </button>
-        
+
       </div>
 
 
@@ -206,6 +208,23 @@ export default function ChecklistForm() {
 
           <div className="title-row">
             <div className="title-banner">DOCUMENTS CHECKLIST</div>
+
+          </div>
+          <div className="client-info-row">
+
+            <div className="country-field name-field">
+              <label className="text-[15px]" htmlFor="client-name">NAME</label>
+              <input
+                id="client-name"
+                ref={nameInputRef}
+                type="text"
+                className={form.name ? 'has-value' : ''}
+                placeholder="Enter client name"
+                autoComplete="name"
+                value={form.name}
+                onChange={(e) => setForm((prev) => ({ ...prev, name: e.target.value }))}
+              />
+            </div>
             <div className="country-field">
               <label htmlFor="country">COUNTRY</label>
               <div className="country-input-wrap">
@@ -231,6 +250,7 @@ export default function ChecklistForm() {
                 </span>
               </div>
             </div>
+
           </div>
 
           {Object.keys(FORM_SECTIONS).map((key) => (

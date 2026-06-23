@@ -334,6 +334,48 @@ body {
   margin-bottom: 10px;
 }
 
+.client-info-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+
+}
+
+
+.name-field input {
+  border: 2px solid #d1d5db;
+  padding: 7px 12px;
+  font-size: 13px;
+  width: 220px;
+  outline: none;
+  background: #e5e7eb;
+  color: #000000;
+  display: flex;
+}
+
+.name-field input:focus {
+  border-color: var(--navy-light);
+  box-shadow: 0 0 0 3px rgba(42, 82, 152, 0.2);
+  font-size: 13px;
+
+}
+
+.name-field input.has-value {
+  background-color: var(--navy);
+  color: var(--white);
+  border-color: var(--navy);
+}
+
+.name-field input::placeholder {
+  color: #6b7280;
+}
+
+.name-field input.has-value::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
 .title-banner {
   flex: 1;
   background: #e5e7eb;
