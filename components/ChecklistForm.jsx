@@ -81,6 +81,30 @@ export default function ChecklistForm() {
     });
   };
 
+  const resetForm = () => {
+    setForm({
+      name: '',
+      country: '',
+      remarks: '',
+      checked: {
+        bio: [],
+        edu: [],
+        english: [],
+        support: [],
+        attestation: [],
+      },
+    });
+  };
+
+  const handleResetClick = () => {
+    resetForm();
+    setWhatsappPhone('');
+    setClientEmail('');
+    setPhoneError('');
+    setEmailError('');
+    showToast('Form reset successfully.');
+  };
+
   const runValidation = () => {
     const result = validateForm(form);
     if (!result.valid) {
@@ -174,6 +198,10 @@ export default function ChecklistForm() {
         <button type="button" className="btn btn-email" onClick={handleEmailClick}>
           <EmailIcon />
           Share via Email
+        </button>
+
+        <button type="button" className="btn btn-reset" onClick={handleResetClick}>
+          Reset form
         </button>
 
       </div>

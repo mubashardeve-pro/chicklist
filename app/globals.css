@@ -83,7 +83,12 @@ body {
 }
 
 .btn-email {
-  background: #ea4335;
+  background: #1a73e8;
+  color: var(--white);
+}
+
+.btn-reset {
+  background: #dc2626;
   color: var(--white);
 }
 
